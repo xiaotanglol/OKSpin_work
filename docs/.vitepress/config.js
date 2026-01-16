@@ -20,9 +20,9 @@ module.exports = {
 			{
 				text: "入职引导（第一天）",
 				children: [
+					{ text: "账号 / 权限 / 平台", link: "/onboarding/03_accounts" },
 					{ text: "团队与技术栈", link: "/onboarding/01_intro" },
 					{ text: "开发环境与工具", link: "/onboarding/02_environment" },
-					{ text: "账号 / 权限 / 平台", link: "/onboarding/03_accounts" },
 					{ text: "第一天任务清单", link: "/onboarding/04_first_day" },
 				],
 			},
