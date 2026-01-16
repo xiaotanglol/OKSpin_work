@@ -34,9 +34,7 @@
 https://my.feishu.cn/wiki/ZwOPwWTVJiARLNkdWkrcPWICnHh?table=tblS36MyIGganDJ3&view=vewjPgBRPQ
 
 用途：
-- 查看需求说明
 - 接收和跟进任务
-- 确认交付内容
 
 ---
 
@@ -56,8 +54,10 @@ https://oivnxffoavj.feishu.cn/wiki/JRzUwts5Vi4RTfkAkJMcvCtOnNe
 - 查看**二、平台/邮箱开通申请**
 
 用途：
+- 查看需求说明
 - 查看与管理任务配置
 - 项目相关后台操作
+- 确认交付内容
 
 ---
 
@@ -110,33 +110,6 @@ https://oivnxffoavj.feishu.cn/wiki/JRzUwts5Vi4RTfkAkJMcvCtOnNe
 
 ---
 
-## 核心仓库说明（重点）
-
-当前主要维护的仓库包括：
-
-- **official_website**
-  - 域名主仓库
-  - 用于官方域名页面相关开发
-
-- **okspin-template**
-  - 较早期的互动玩法仓库
-  - 主要用于历史项目维护
-
-- **okspin-tml-loader**
-  - 加载页（Loader）相关仓库
-  - 负责资源加载与首屏体验
-
-- **okspin-tml-v2**
-  - 新一代主框架仓库
-  - 覆盖内容包括：
-    - 互动玩法
-    - 域名 UI
-    - EndCard（EC）
-
-> 日常开发以 **okspin-tml-v2** 和 **official_website** 为主
-
----
-
 ## 权限申请清单
 
 请确认你已具备以下权限：
@@ -144,7 +117,6 @@ https://oivnxffoavj.feishu.cn/wiki/JRzUwts5Vi4RTfkAkJMcvCtOnNe
 - Git 仓库 **read / write**
 - 测试环境访问权限
 - Jenkins 发布平台查看或操作权限
-- 线上日志 / 监控查看权限（只读即可）
 
 > 如权限不足，请及时联系负责人补充
 
@@ -159,4 +131,3 @@ https://oivnxffoavj.feishu.cn/wiki/JRzUwts5Vi4RTfkAkJMcvCtOnNe
 - ✅ 在飞书平台查看并理解需求
 - ✅ 能登录 Admin 任务管理后台
 - ✅ 知道 Jenkins 发布平台位置及基本用途
-- ✅ 清楚日志 / 报错的查看入口

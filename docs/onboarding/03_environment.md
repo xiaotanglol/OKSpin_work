@@ -81,6 +81,33 @@ C:\Windows\System32\drivers\etc
 
 ---
 
+## 核心仓库说明（重点）
+
+当前主要维护的仓库包括：
+
+- **official_website**
+  - 域名主仓库
+  - 用于官方域名页面相关开发
+
+- **okspin-template**
+  - 较早期的互动玩法仓库
+  - 主要用于历史项目维护
+
+- **okspin-tml-loader**
+  - 加载页（Loader）相关仓库
+  - 负责资源加载与首屏体验
+
+- **okspin-tml-v2**
+  - 新一代主框架仓库
+  - 覆盖内容包括：
+    - 互动玩法
+    - 域名 UI
+    - EndCard（EC）
+
+> 日常开发以 **okspin-tml-v2** 和 **official_website** 为主
+
+---
+
 ## 开发工具
 
 开发工具可按个人习惯选择：

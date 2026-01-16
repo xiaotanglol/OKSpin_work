@@ -7,7 +7,7 @@ module.exports = {
 
 	themeConfig: {
 		nav: [
-			{ text: "入职", link: "/onboarding/01_intro" },
+			{ text: "入职", link: "/onboarding/01_accounts" },
 			{ text: "流程", link: "/workflow/01_project_flow" },
 			{ text: "项目交接", link: "/projects/01_overview" },
 			{ text: "技术规范", link: "/tech/01_coding" },
@@ -20,9 +20,9 @@ module.exports = {
 			{
 				text: "入职引导（第一天）",
 				children: [
-					{ text: "账号 / 权限 / 平台", link: "/onboarding/03_accounts" },
-					{ text: "团队与技术栈", link: "/onboarding/01_intro" },
-					{ text: "开发环境与工具", link: "/onboarding/02_environment" },
+					{ text: "账号 / 权限 / 平台", link: "/onboarding/01_accounts" },
+					{ text: "团队与技术栈", link: "/onboarding/02_intro" },
+					{ text: "开发环境与工具", link: "/onboarding/03_environment" },
 					{ text: "第一天任务清单", link: "/onboarding/04_first_day" },
 				],
 			},
@@ -59,6 +59,12 @@ module.exports = {
 					{ text: "AI 开发工作流", link: "/ai/workflow" },
 					{ text: "Prompt 模板库", link: "/ai/prompt" },
 					{ text: "工具清单（Cursor 等）", link: "/ai/tools" },
+				],
+			},
+			{
+				text: "日报/周报/月报",
+				children: [
+					{ text: "工作填写", link: "/daily/01_daily" },
 				],
 			},
 			{
