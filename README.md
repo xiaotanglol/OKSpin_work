@@ -2,10 +2,7 @@
 
 ## 1. 安装依赖
 ```bash
-先装
 npm i -D vitepress@0.22.4
-再装
-npm install
 ```
 
 ## 2. 本地预览（开发）
