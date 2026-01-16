@@ -1,0 +1,13 @@
+{
+  "name": "vitepress-handover-docs-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs --port 9527",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs --port 9527"
+  },
+  "devDependencies": {
+    "vitepress": "^0.22.4"
+  }
+}
