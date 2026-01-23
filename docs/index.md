@@ -12,7 +12,7 @@ hero:
       text: 从这里开始（入职）
       link: /onboarding/01_accounts
     - theme: alt
-      text: 项目交接
+      text: 项目制作
       link: /projects/01_overview
 ---
 

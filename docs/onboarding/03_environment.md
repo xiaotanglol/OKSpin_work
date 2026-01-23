@@ -135,8 +135,8 @@ C:\Windows\System32\drivers\etc
 - 项目上传
 
 ##### 安装方式（VS Code）
-- 提前将插件 **离线保存到本地**
-- 使用 VS Code 的 **“从 VSIX 安装插件”**
+- 使用 VS Code 提前将 **插件离线保存到本地**
+- 使用其他开发工具的 **“从 VSIX 安装插件”**
 - 插件文件示例：
 ```
 oks-tml-helper.vsix

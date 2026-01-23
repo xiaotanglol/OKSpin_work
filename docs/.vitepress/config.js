@@ -12,6 +12,7 @@ module.exports = {
 			{ text: "项目交接", link: "/projects/01_overview" },
 			{ text: "技术规范", link: "/tech/01_coding" },
 			{ text: "AI", link: "/ai/workflow" },
+			{ text: "日报/周报/月报", link: "/daily/01_daily" },
 			{ text: "附录", link: "/appendix/links" },
 		],
 		sidebarDepth: 2,
@@ -37,10 +38,10 @@ module.exports = {
 			{
 				text: "项目交接（核心）",
 				children: [
-					{ text: "项目总览", link: "/projects/01_overview" },
-					{ text: "目录结构说明", link: "/projects/02_structure" },
-					{ text: "本地运行与构建", link: "/projects/03_run_build" },
-					{ text: "发布 / 域名 / CDN", link: "/projects/04_deploy" },
+					{ text: "玩法制作", link: "/projects/01_overview" },
+					{ text: "域名制作", link: "/projects/02_structure" },
+					{ text: "域名UI制作", link: "/projects/03_run_build" },
+					{ text: "EndCard(ec)制作", link: "/projects/04_deploy" },
 					{ text: "交接 Checklist（必对照）", link: "/projects/05_handover_checklist" },
 				],
 			},
