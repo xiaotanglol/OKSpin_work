@@ -1,6 +1,6 @@
 # 玩法制作
 
-## okspin-tml-v2 仓库文件目录结构
+## 1. okspin-tml-v2 仓库文件目录结构
 
 > 说明：玩法与 EndCard（EC）项目通常在 src/views/ 下创建独立目录。
 
@@ -23,9 +23,9 @@ okspin-tml-v2/
 └─ package.json           # 项目依赖与脚本配置
 ```
 
-## 创建项目
+## 2. 创建项目
 
-第一步 创建项目
+### 第一步 创建项目
 
 -   主要在 okspin-tml-v2\src\views 下面创建项目文件夹
 -   玩法名称（build 变量）：推荐大驼峰/小驼峰，最终通常会体现在上线后的 xxx.html（如 DiamondScratchCard.html）
@@ -50,7 +50,7 @@ RTB_DiamondScratchCard/
 * 表示必填项
 ```
 
-第二步 配置 build.json
+### 第二步 配置 build.json
 
 ```json
 {
@@ -82,7 +82,7 @@ RTB_DiamondScratchCard/
 }
 ```
 
-第三步 配置 package.json
+### 第三步 配置 package.json
 
 ```json
     // 运行命令
@@ -107,11 +107,11 @@ RTB_DiamondScratchCard/
 
 ```
 
-## 运行/构建/上传项目
+## 3. 运行/构建/上传项目
 
 ![alt text](image.png)
 
-## 文件配置
+## 4. 文件配置
 
 :::info 文件配置说明
 
@@ -122,7 +122,7 @@ RTB_DiamondScratchCard/
 
 :::
 
-## 玩法开发说明
+## 5. 玩法开发说明
 
 1. 用到的数据上报包括（请自行查看 Hdad 和 sdk 相关 JS 文件）：
 
@@ -146,3 +146,5 @@ RTB_DiamondScratchCard/
 5. 公共文件中有很多方法、组件以及动效，可以自行引用。
 
 6. 所有中奖弹窗分为无边框和有边框两种，需要引入对应公共组件 Prize 配置。
+
+7. 奖品图片统一使用 webp 格式，请自行转换，打包上传需要将 webp 压缩。

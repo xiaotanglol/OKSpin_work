@@ -31,8 +31,6 @@ module.exports = {
 				text: "工作流程",
 				children: [
 					{ text: "项目从需求到上线", link: "/workflow/01_project_flow" },
-					{ text: "Git 分支与提交规范", link: "/workflow/02_git_flow" },
-					{ text: "提测 / Review / 发布", link: "/workflow/03_review_release" },
 				],
 			},
 			{
@@ -42,7 +40,6 @@ module.exports = {
 					{ text: "域名制作", link: "/projects/02_structure" },
 					{ text: "域名UI制作", link: "/projects/03_run_build" },
 					{ text: "EndCard(ec)制作", link: "/projects/04_deploy" },
-					{ text: "交接 Checklist（必对照）", link: "/projects/05_handover_checklist" },
 				],
 			},
 			{

@@ -10,10 +10,9 @@
 - Lottie/Spine：记录版本、导出参数、资源来源
 
 ## 引用图片（VitePress）
-把图片放 `docs/public/images/`：
-```md
-![示例](/images/demo.png)
-```
+把图片放 `项目文件/assets/image/`：
+
+![示例](image.png)
 
 ## 验收标准 ✅
 - 资源可追溯、可复现、不会“换人就跑不起来”
