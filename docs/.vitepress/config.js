@@ -1,4 +1,3 @@
-console.log("CONFIG LOADED:", __filename);
 module.exports = {
 	base: "/OKSpin_work/",
 	lang: "zh-CN",
@@ -9,7 +8,7 @@ module.exports = {
 		nav: [
 			{ text: "入职", link: "/onboarding/01_accounts" },
 			{ text: "流程", link: "/workflow/01_project_flow" },
-			{ text: "项目交接", link: "/projects/01_overview" },
+			{ text: "项目交接", link: "/projects/01_play1" },
 			{ text: "技术规范", link: "/tech/01_coding" },
 			{ text: "AI", link: "/ai/workflow" },
 			{ text: "日报/周报/月报", link: "/daily/01_daily" },
@@ -29,17 +28,16 @@ module.exports = {
 			},
 			{
 				text: "工作流程",
-				children: [
-					{ text: "项目从需求到上线", link: "/workflow/01_project_flow" },
-				],
+				children: [{ text: "项目从需求到上线", link: "/workflow/01_project_flow" }],
 			},
 			{
 				text: "项目交接（核心）",
 				children: [
-					{ text: "玩法制作", link: "/projects/01_overview" },
-					{ text: "域名制作", link: "/projects/02_structure" },
-					{ text: "域名UI制作", link: "/projects/03_run_build" },
-					{ text: "EndCard(ec)制作", link: "/projects/04_deploy" },
+					{ text: "玩法制作", link: "/projects/01_play1" },
+					{ text: "域名制作", link: "/projects/02_play2" },
+					{ text: "域名UI制作", link: "/projects/03_play3" },
+					{ text: "EndCard(ec)制作", link: "/projects/04_play4" },
+					{ text: "loader制作", link: "/projects/05_play5" },
 				],
 			},
 			{
@@ -61,9 +59,7 @@ module.exports = {
 			},
 			{
 				text: "日报/周报/月报",
-				children: [
-					{ text: "工作填写", link: "/daily/01_daily" },
-				],
+				children: [{ text: "工作填写", link: "/daily/01_daily" }],
 			},
 			{
 				text: "附录",

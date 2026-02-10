@@ -29,10 +29,10 @@ okspin-tml-v2/
 
 -   主要在 okspin-tml-v2\src\views 下面创建项目文件夹
 -   玩法名称（build 变量）：推荐大驼峰/小驼峰，最终通常会体现在上线后的 xxx.html（如 DiamondScratchCard.html）
--   项目目录（dir 变量）：本地目录名，可加前缀区分制作人/版本（如 RTB_DiamondScratchCard）
+-   项目目录（dir 变量）：本地目录名，必须使用大驼峰（如 DiamondScratchCard）
 
 ```js
-RTB_DiamondScratchCard/
+DiamondScratchCard/
 ├─ assets/              # * 静态资源
 │  ├─ image/            # * 图片资源
 ├─ ├─ card.json         # 奖品/卡牌配置数据
@@ -97,7 +97,7 @@ RTB_DiamondScratchCard/
     "build-DiamondScratchCard": "cross-env build=DiamondScratchCard dir=RTB_DiamondScratchCard suffix=true vite build",
 
     "build-玩法名称": "cross-env build=玩法名称 dir=项目名称 suffix=true vite build",
-    // suffix只有通用版需要配置
+    // suffix只有RTB版本需要配置
 
     /****** 上传命令 ******/
     // 正式
@@ -109,20 +109,149 @@ RTB_DiamondScratchCard/
 
 ## 3. 运行/构建/上传项目
 
+### 单个项目构建与上传
+
 ![alt text](image.png)
+
+### 批量构建与上传（build.sh 脚本）
+
+在 `okspin-tml-v2` 仓库根目录可以创建一个批量构建上传脚本：
+
+```
+okspin-tml-v2/build.sh
+```
+
+脚本内容：
+
+```bash
+start_time=$(date +%s)   # 记录开始时间
+
+# 需要构建上传的项目名称（可添加多个）
+items=("ecLuckyCats" "ecLuckyCats2")
+
+# 循环执行构建与上传
+for item in "${items[@]}"
+do
+    echo "Running yarn build-${item}..."
+    yarn build-"${item}"
+
+    echo "Running yarn rsync for ${item}..."
+    yarn rsync "${item}"
+done
+
+# 输出总耗时
+end_time=$(date +%s)
+total_time=$((end_time - start_time))
+echo "Script completed in ${total_time} seconds."
+```
+
+#### 使用方式
+
+在仓库根目录：
+
+```
+Shift + 右键 → Git Bash Here
+```
+
+执行：
+
+```bash
+sh build.sh
+```
+
+#### 说明
+
+-   `items` 数组中填写需要构建上传的项目名称
+-   支持同时批量构建多个玩法 / EC
+-   适合上线前统一批量发布
+
+建议上线前使用该脚本进行批量构建与上传。
 
 ## 4. 文件配置
 
-:::info 文件配置说明
+### 版本类型可视化对照表
 
--   RTB 通用版：showIcon 通常为 [1,2]，构建需 suffix=true
--   RTB 定制版：isExa=true，showIcon 通常为 [1,2]，构建需 suffix=true
--   直媒版：showIcon 通常为 [0,1,2]（并可能存在自动跳转逻辑，按项目实现）
--   SG 版本：通常要求 adSceneId=9（以团队实际约定为准）
+| 版本类型       | 用途定位      | showIcon 配置 |   suffix  |    isExa  | adSceneId |            特点总结          |
+| -------------- | ------------ | ------------ | --------- | --------- | ---------- | -------------------------- |
+| **RTB 通用版** | 标准 RTB 投放 | `[1,2]`      |    ✅     |    ❌   |      ❌   | 标准模板、可复用性高、默认选择 |
+| **RTB 定制版** | 客户定制 RTB  | `[1,2]`      |    ✅     |    ✅   |     ❌   | 在通用版基础上做定制修改       |
+| **直媒版**     | 直接媒体投放  | `[0,1,2]`    |    ❌     |    ❌   |     ❌   | 自动跳转、流程简化、快速上线   |
+| **SG 版本**    | SG 平台投放   | 按需求配置    |    ❌     |   ❌    | ✅ 默认 = 9 | SG 专用版本、必须带场景 ID     |
 
-:::
 
-## 5. 玩法开发说明
+## 5. Admin 状态修改流程
+
+玩法开发完成后，需要在 **Admin 后台更新模板状态**。
+
+### 第一步：Creative 分类
+
+进入：
+
+```
+Edit Template → Creative
+```
+
+#### 必做操作：
+
+✅ 上传 **玩法首页 Preview Image**
+
+```
+Preview Image Upload → Upload
+```
+
+✅ 填写玩法访问路径
+
+```
+*Url = /tml/玩法路径.html
+```
+
+示例：
+
+```
+/tml/DiamondScratchCard.html
+```
+
+![alt text](play1.png)
+
+### 第二步：Base 分类
+
+进入：
+
+```
+Edit Template → Base
+```
+
+将状态修改为：
+
+```
+Status → Verifying
+```
+
+这是提测阶段的标准状态。
+
+![alt text](play2.png)
+
+#### Admin 状态流转说明
+
+| 状态 | 含义 |
+|------|------|
+| Designing | 设计中 |
+| Developing | 开发中 |
+| **Verifying** | 提测中（必须设置） |
+| Active | 已上线 |
+| Pause | 暂停 |
+
+#### 提测 checklist
+
+在点击 Submit 前确认：
+
+- [ ] 玩法可正常访问
+- [ ] build.json 配置无误
+- [ ] Preview Image 已上传
+- [ ] Url 路径填写正确
+- [ ] 状态已改为 Verifying
+
+## 6. 玩法开发说明
 
 1. 用到的数据上报包括（请自行查看 Hdad 和 sdk 相关 JS 文件）：
 
@@ -137,7 +266,7 @@ RTB_DiamondScratchCard/
 
 3. 每个玩法项目都需要引入：
 
-    - 模版退出 close 组件
+    - 模版退出 close 组件（按需引入）
     - 公共 option / 自定义 option（左上角选...共 CommonPopTip 弹窗组件（未中奖、没次数、规则）~~）
     - 游戏开始时互动需要限制 flag，并确认 bingo 返回数据。
 
@@ -148,3 +277,5 @@ RTB_DiamondScratchCard/
 6. 所有中奖弹窗分为无边框和有边框两种，需要引入对应公共组件 Prize 配置。
 
 7. 奖品图片统一使用 webp 格式，请自行转换，打包上传需要将 webp 压缩。
+
+8. 为了保证玩法的轻量，请图片尽量保证全部图片以 webp 格式，并且小于 100kb
