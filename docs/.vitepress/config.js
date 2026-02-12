@@ -54,7 +54,7 @@ module.exports = {
 				children: [
 					{ text: "AI 开发工作流", link: "/ai/workflow" },
 					{ text: "Prompt 模板库", link: "/ai/prompt" },
-					{ text: "工具清单（Cursor 等）", link: "/ai/tools" },
+					{ text: "工具清单", link: "/ai/tools" },
 				],
 			},
 			{
