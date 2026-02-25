@@ -18,9 +18,9 @@ official_website/
 ├── www.xxx.net/
 ```
 
-每一个文件夹就是一个独立域名，路径结构根据运营同学买的.net或者.com而定。
+每一个文件夹就是一个独立域名，路径结构根据运营同学买的.net 或者.com 而定。
 
-👉 **不要在其他仓库创建域名项目** 
+👉 **不要在其他仓库创建域名项目**
 👉 所有域名必须放在 `official_website` 内统一管理
 
 ## 2. 域名制作流程（记住这一条就够）
@@ -143,6 +143,14 @@ index.html
 → Jenkins Build
 → 线上验证
 ```
+- 第一步
+![alt text](jenkins-step1.png)
+
+- 第二步
+![alt text](jenkins-step2.png)
+
+- 第三步
+ ![alt text](jenkins-step3.png)
 
 部署时确认：
 
