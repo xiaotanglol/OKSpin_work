@@ -160,7 +160,7 @@ oks-tml-helper.vsix
 ### 包管理工具
 - npm（默认）
 - cnpm
-- yarn  
+- yarn（必须）
 > 以具体项目要求为准
 
 ### 浏览器

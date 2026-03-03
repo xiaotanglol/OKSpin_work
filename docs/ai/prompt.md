@@ -16,7 +16,7 @@ Vue3 + Vite + Scoped CSS
 {需求描述}
 
 【约束】
-- 使用 <script setup>
+- 使用 script setup
 - 使用 scoped 样式
 - 响应式布局
 - 注释关键逻辑
