@@ -1,7 +1,5 @@
 # Loader 制作
 
-> 说明：本文档中的代码块在 VitePress 1.x 会自带 **Copy** 按钮，可一键复制。
-
 ## 1. 新增 Loader 目录规则
 
 -   目录位置：`okspin-tml-loader/src/`
@@ -89,7 +87,39 @@ yarn deploy-prod
 
 该命令会自动上传到生产服务器。
 
-## 7. Admin 状态修改流程（Loader 提测必做）
+## 7. 线上测试（CDN）
+
+### 7.1 Loader 页面测试
+
+访问：
+
+```bash
+https://cdn.gamifyspace.com/tml/l/{文件夹名称}/
+```
+
+示例：
+
+```bash
+https://cdn.gamifyspace.com/tml/l/l154/
+```
+
+说明：
+
+- 页面只会显示 **Loader**
+
+### 7.2 完整玩法测试
+
+示例：
+
+```bash
+https://cdn.gamifyspace.com/tml/l/l154/#/tml/christmasSockTurntableYn.html?v=2305311302#/?pid=10452&ptid=9859&tid=953&jsv=2308011632&did=837659bc-c949-4d5f-acab-9463d808d7c0
+```
+
+说明：
+
+Loader 加载完成后会自动跳转到玩法页面。
+
+## 8. Admin 状态修改流程（Loader 提测必做）
 
 Loader 制作完成并上传后，需要在 Admin 后台更新项目状态。
 
@@ -162,7 +192,7 @@ Verifying
 
 完成后即可通知测试或运营验证。
 
-## 8. 新人快速流程总结
+## 9. 新人快速流程总结
 
 ```text
 git pull
