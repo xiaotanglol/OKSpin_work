@@ -279,3 +279,5 @@ Status → Verifying
 7. 奖品图片统一使用 webp 格式，请自行转换，打包上传需要将 webp 压缩。
 
 8. 为了保证玩法的轻量，请图片尽量保证全部图片以 webp 格式，并且小于 100kb
+
+9. Prize区分是否有无边框adScene == 1有边框adScene == 2和adScene == 9无边框
