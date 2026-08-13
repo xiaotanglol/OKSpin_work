@@ -62,6 +62,8 @@ DiamondScratchCard/
 		"DomainUI": "common",
 		"theme": "DiamondScratchCard",
         "isExa": false,
+        "isRTB": true,
+        "loadMraidJs": true
         ...
 	}
     ...
@@ -76,6 +78,8 @@ DiamondScratchCard/
 		"DomainUI": "common", // 域名UI（需要问运营是否是特殊域名UI，默认common）
 		"theme": "最终项目名称html", // 项目名称（可以默认不填）
         "isExa": false, // 是否是定制版本
+        "isRTB": false, // 是否是RTB版本
+        "loadMraidJs": false // 是否加载Mraid.js（默认false）  ios端需要配置
         ...(后续内容可以自定义配置)
 	}
     (有多个版本的时候，项目配置方式同上，直接在对象中添加即可)
@@ -171,12 +175,13 @@ sh build.sh
 
 ### 版本类型可视化对照表
 
-| 版本类型       | 用途定位      | showIcon 配置 |   suffix  |    isExa  | adSceneId |            特点总结          |
+| 版本类型       | 用途定位      | showIcon 配置 |   suffix  |    isExa  | adSceneId  |            特点总结          |
 | -------------- | ------------ | ------------ | --------- | --------- | ---------- | -------------------------- |
 | **RTB 通用版** | 标准 RTB 投放 | `[1,2]`      |    ✅     |    ❌   |      ❌   | 标准模板、可复用性高、默认选择 |
 | **RTB 定制版** | 客户定制 RTB  | `[1,2]`      |    ✅     |    ✅   |     ❌   | 在通用版基础上做定制修改       |
 | **直媒版**     | 直接媒体投放  | `[0,1,2]`    |    ❌     |    ❌   |     ❌   | 自动跳转、流程简化、快速上线   |
 | **SG 版本**    | SG 平台投放   | 按需求配置    |    ❌     |   ❌    | ✅ 默认 = 9 | SG 专用版本、必须带场景 ID     |
+
 
 
 ## 5. Admin 状态修改流程
